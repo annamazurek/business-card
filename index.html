@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Business-card</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="normalize.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Business-card</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    
+	<main class="card">
+		<article class="person">
+			<img class="person__photo" src="img/photo.JPG" alt="avatar">
+			<div>
+				<header class="person__header">
+					<h1 class="person__name">Anna Mazurek</h1>
+					<span class="person__position">junior frontend developer</span>
+				</header>
+				<div class="person__description">
+					<p class="person__description-paragraph">
+						Przyszła programistka w początkowej fazie rozwoju. Pierwszy raz sporkała się z frontend'em pod koniec ubiegłego (2018) roku, ale prawdziwie zafascynowała się nim podczas kursu <span>WTF: Co Ten Frontend?</span>
+					</p>
+					<p class="person__description-paragraph">
+						Lubi góry, fantastykę i zwierzęta, codziennie pracuje nad swoim <span>rozwojem osobistym</span>.
+					</p>
+				</div>
+				<footer class="card__network">
+					<a href="https://github.com/annamazurek">GitHub</a>
+				</footer>
+			</div>
+		</article>
+	</main>
+
 </body>
+
 </html>
