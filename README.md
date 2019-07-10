@@ -1,3 +1,3 @@
 # business-card
 
-![business-card screenshot](github/screenshot.png)
+![business-card screenshot](business-card/img/screenshot.PNG)
