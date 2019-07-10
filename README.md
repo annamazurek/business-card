@@ -1,3 +1,3 @@
 # business-card
 
-![business-card screenshot](business-card/img/screenshot.PNG)
+![business-card screenshot](img/screenshot.PNG)
