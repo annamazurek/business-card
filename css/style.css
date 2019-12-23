@@ -18,18 +18,26 @@ body {
   align-items: center;
 }
 
-.card {
+.person {
+  /* Front */
+  /* Back */
+}
+
+.person--front {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 624px;
   width: 100%;
   background: #f8f8f8;
   border-radius: 16px;
   padding: 16px;
+  transform: perspective(800px) rotateY(0deg);
+  transition: transform 1s linear;
 }
 
-.person {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.person--front:hover {
+  transform: perspective(800px) rotateY(-180deg);
 }
 
 .person__photo {
