@@ -19,7 +19,25 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.button-flip, .button-flip--back{
+  position: absolute;
+  color: $ivory;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  width: 56px;
+  height: 38px;
+  right: 38px;
+  bottom: 38px;
+  background: linear-gradient($green, $blueGrotto, $blue);
+  // background: $green;
+  // box-shadow: $blue 0 3px 4px;
+  border: 1px solid $blue;
+  border-radius: 6px;
+  // &:hover { // onclick
+  //   box-shadow: none;
+  //   bottom: 34px;
+  // }
+}
 .card {
   max-width: 624px;
   width: 100%;
@@ -31,10 +49,9 @@ body {
   padding: 16px;
   transform-style: preserve-3d;
   transition: transform 0.5s ease;
-
-  &:hover {
-    transform: rotateY(180deg);
-  }
+  // &:hover {
+  //   transform: rotateY(180deg);
+  // }
 }
 
 .person {
