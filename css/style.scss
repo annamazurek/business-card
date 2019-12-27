@@ -21,7 +21,7 @@ body {
 }
 .button-flip, .button-flip--back{
   position: absolute;
-  color: $ivory;
+  color: #FFF;
   font-size: 1.5rem;
   font-weight: bolder;
   width: 56px;
@@ -75,8 +75,9 @@ body {
     width: 100%;
     max-height: 148px;
     height: 100%;
-    margin: 16px;
+    margin-right: 16px;
     border-radius: 50%;
+    border: 4px double $blue;
   }
   &__about {
     margin: 16px;
@@ -113,6 +114,7 @@ body {
 .person--back {
   justify-content: space-around;
   transform: rotateY(180deg);
+  display: none;
 }
 .skills {
   display: flex;

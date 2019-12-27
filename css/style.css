@@ -18,6 +18,20 @@ body {
   align-items: center;
 }
 
+.button-flip, .button-flip--back {
+  position: absolute;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  width: 56px;
+  height: 38px;
+  right: 38px;
+  bottom: 38px;
+  background: linear-gradient(#1DC690, #278AB0, #1C4670);
+  border: 1px solid #1C4670;
+  border-radius: 6px;
+}
+
 .card {
   max-width: 624px;
   width: 100%;
@@ -29,10 +43,6 @@ body {
   padding: 16px;
   transform-style: preserve-3d;
   transition: transform 0.5s ease;
-}
-
-.card:hover {
-  transform: rotateY(180deg);
 }
 
 .person {
@@ -58,8 +68,9 @@ body {
   width: 100%;
   max-height: 148px;
   height: 100%;
-  margin: 16px;
+  margin-right: 16px;
   border-radius: 50%;
+  border: 4px double #1C4670;
 }
 
 .person__about {
@@ -101,6 +112,7 @@ body {
 .person--back {
   justify-content: space-around;
   transform: rotateY(180deg);
+  display: none;
 }
 
 .skills {
