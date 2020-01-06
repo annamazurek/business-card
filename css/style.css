@@ -1,11 +1,13 @@
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -13,36 +15,79 @@ body {
   padding: 8px;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.button-flip, .button-flip--back {
+.button-flip,
+.button-flip--back {
   position: absolute;
-  color: #FFF;
+  color: #1DC690;
+  -webkit-box-shadow: 0 0px 3px rgba(117, 112, 33, 0.466);
+          box-shadow: 0 0px 3px rgba(117, 112, 33, 0.466);
   font-size: 1.5rem;
   font-weight: bolder;
-  width: 56px;
+  width: 38px;
   height: 38px;
-  right: 38px;
-  bottom: 38px;
-  background: linear-gradient(#1DC690, #278AB0, #1C4670);
-  border: 1px solid #1C4670;
-  border-radius: 6px;
+  right: 16px;
+  bottom: 16px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 16px 0;
+}
+
+.button-flip:focus,
+.button-flip--back:focus {
+  -webkit-animation: onFocus .8s infinite;
+          animation: onFocus .8s infinite;
+}
+
+@-webkit-keyframes onFocus {
+  0% {
+    font-size: 1.5rem;
+  }
+  50% {
+    font-size: 1.7rem;
+  }
+  100% {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes onFocus {
+  0% {
+    font-size: 1.5rem;
+  }
+  50% {
+    font-size: 1.7rem;
+  }
+  100% {
+    font-size: 1.5rem;
+  }
 }
 
 .card {
-  max-width: 624px;
-  width: 100%;
-  max-height: 330px;
-  height: 100%;
+  width: 624px;
+  height: 330px;
   position: absolute;
-  background: #EAEAE0;
+  background: #fffff6;
   border-radius: 16px;
   padding: 16px;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .person {
@@ -53,14 +98,23 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.9s linear 0s;
+  transition: -webkit-transform 0.9s linear 0s;
   transition: transform 0.9s linear 0s;
+  transition: transform 0.9s linear 0s, -webkit-transform 0.9s linear 0s;
 }
 
 .person--front {
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .person__photo {
@@ -68,13 +122,13 @@ body {
   width: 100%;
   max-height: 148px;
   height: 100%;
-  margin-right: 16px;
+  margin: 16px 16px 16px 0;
   border-radius: 50%;
   border: 4px double #1C4670;
 }
 
 .person__about {
-  margin: 16px;
+  padding: 16px;
 }
 
 .person__name {
@@ -110,18 +164,27 @@ body {
 
 /* Back */
 .person--back {
-  justify-content: space-around;
-  transform: rotateY(180deg);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   display: none;
 }
 
 .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .skills__item {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -131,10 +194,14 @@ body {
   width: 4px;
   height: 4px;
   background: #278AB0;
-  transform: translateX(-15px);
-  align-self: center;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 span {
   color: #278AB0;
 }
+/*# sourceMappingURL=style.css.map */
