@@ -25,7 +25,6 @@ body {
   color: $green;
   box-shadow: 0 0px 3px rgba(117, 112, 33, 0.466);
   font-size: 1.5rem;
-  // width: fit-content;
   width: 38px;
   height: 38px;
   right: 0;
@@ -57,10 +56,7 @@ body {
 .card {
   max-width: 624px;
   width: 100%;
-  // max-height: 330px;
-  // height: 100%;
   height: fit-content;
-  // position: relative;
   background: $ivory;
   border-radius: 16px;
   padding: 16px;
@@ -71,9 +67,6 @@ body {
 .person {
   &--front,
   &--back {
-    // position: absolute;
-    // width: 100%;
-    // height: 100%;
     display: flex;
     backface-visibility: hidden;
     transition: transform 0.9s linear 0s;
@@ -160,27 +153,13 @@ body {
   }
   &__item {
     list-style: none;
-    // text-align: center;
     line-height: 1.5rem;
-
-    // display: flex;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   width: 4px;
-    //   height: 4px;
-    //   border-radius: 50%;
-    //   background: $blueGrotto;
-    //   transform: translateX(-15px);
-    //   align-self: center;
-    // }
   }
 }
 
 span {
   color: $blueGrotto;
-  // background: linear-gradient(to left, $blueGrotto, $green);
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
+}
+em {
+  font-size: small;
 }
