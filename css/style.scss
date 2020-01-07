@@ -25,12 +25,11 @@ body {
   color: $green;
   box-shadow: 0 0px 3px rgba(117, 112, 33, 0.466);
   font-size: 1.5rem;
-  font-weight: bolder;
   // width: fit-content;
   width: 38px;
   height: 38px;
-  right: 16px;
-  bottom: 16px;
+  right: 0;
+  bottom: 0;
   background: white;
   border: none;
   cursor: pointer;
@@ -51,28 +50,30 @@ body {
     }
   }
 }
+.button-flip--back {
+  right: -16px;
+  bottom: -16px;
+}
 .card {
-  width: 624px;
-  // width: 100%;
-  height: 330px;
+  max-width: 624px;
+  width: 100%;
+  // max-height: 330px;
   // height: 100%;
-  position: absolute;
+  height: fit-content;
+  // position: relative;
   background: $ivory;
   border-radius: 16px;
   padding: 16px;
   transform-style: preserve-3d;
   transition: transform 0.5s ease;
-  // &:hover {
-  //   transform: rotateY(180deg);
-  // }
 }
 
 .person {
   &--front,
   &--back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    // position: absolute;
+    // width: 100%;
+    // height: 100%;
     display: flex;
     backface-visibility: hidden;
     transition: transform 0.9s linear 0s;
@@ -102,8 +103,14 @@ body {
     line-height: 41px;
   }
   &__position {
-    font-style: italic;
     font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+    color: $blueGrotto;
+    background: linear-gradient(to left, $blueGrotto, $green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
   }
   &__description-container {
     max-width: 380px;
@@ -128,30 +135,52 @@ body {
   justify-content: space-around;
   transform: rotateY(180deg);
   display: none;
+  flex-wrap: wrap;
 }
 .skills {
   display: flex;
   flex-direction: column;
+  &:first-child {
+    margin-right: 18px;
+  }
   &__header {
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: $blueGrotto;
+      position: absolute;
+      left: 0;
+      transform: translateY(29px);
+    }
   }
   &__list {
+    padding: 19px;
+    margin: 0;
   }
   &__item {
     list-style: none;
-    display: flex;
+    // text-align: center;
+    line-height: 1.5rem;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: $blueGrotto;
-      transform: translateX(-15px);
-      align-self: center;
-    }
+    // display: flex;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 4px;
+    //   height: 4px;
+    //   border-radius: 50%;
+    //   background: $blueGrotto;
+    //   transform: translateX(-15px);
+    //   align-self: center;
+    // }
   }
 }
 
 span {
   color: $blueGrotto;
+  // background: linear-gradient(to left, $blueGrotto, $green);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
 }

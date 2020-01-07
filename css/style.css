@@ -33,11 +33,10 @@ body {
   -webkit-box-shadow: 0 0px 3px rgba(117, 112, 33, 0.466);
           box-shadow: 0 0px 3px rgba(117, 112, 33, 0.466);
   font-size: 1.5rem;
-  font-weight: bolder;
   width: 38px;
   height: 38px;
-  right: 16px;
-  bottom: 16px;
+  right: 0;
+  bottom: 0;
   background: white;
   border: none;
   cursor: pointer;
@@ -75,10 +74,17 @@ body {
   }
 }
 
+.button-flip--back {
+  right: -16px;
+  bottom: -16px;
+}
+
 .card {
-  width: 624px;
-  height: 330px;
-  position: absolute;
+  max-width: 624px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background: #fffff6;
   border-radius: 16px;
   padding: 16px;
@@ -95,9 +101,6 @@ body {
 }
 
 .person--front, .person--back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,8 +142,14 @@ body {
 }
 
 .person__position {
-  font-style: italic;
   font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+  color: #278AB0;
+  background: -webkit-gradient(linear, right top, left top, from(#278AB0), to(#1DC690));
+  background: linear-gradient(to left, #278AB0, #1DC690);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .person__description-container {
@@ -169,6 +178,8 @@ body {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .skills {
@@ -181,24 +192,29 @@ body {
           flex-direction: column;
 }
 
-.skills__item {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.skills:first-child {
+  margin-right: 18px;
 }
 
-.skills__item::before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 4px;
+.skills__header::after {
+  content: '';
+  width: 100%;
+  height: 1px;
   background: #278AB0;
-  -webkit-transform: translateX(-15px);
-          transform: translateX(-15px);
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  position: absolute;
+  left: 0;
+  -webkit-transform: translateY(29px);
+          transform: translateY(29px);
+}
+
+.skills__list {
+  padding: 19px;
+  margin: 0;
+}
+
+.skills__item {
+  list-style: none;
+  line-height: 1.5rem;
 }
 
 span {
