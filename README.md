@@ -2,7 +2,7 @@
 
 The aim of this project was to cut graphic designed in Figma and to convert it into HTML and CSS.
 
-You can see the website [here](annamazurek.github.io/business-card/).
+You can see the website [here](annamazurek.github.io/business-card).
 
 # Used technologies and tools
 
