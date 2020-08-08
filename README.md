@@ -2,10 +2,12 @@
 
 The aim of this project was to cut graphic designed in Figma and to convert it into HTML and CSS.
 
+You can see the website [here](annamazurek.github.io/business-card/).
+
 # Used technologies and tools
 
 - HTML5
-- CSS3 (Flexbox, BEM)
+- CSS3 (Flexbox, BEM, RWD)
 - Sass (SCSS)
 - JS
 - Figma
